@@ -1,0 +1,102 @@
+/* לא הבנתי איפה לרשום את התשובות לשיעורים אז אני רושם כאן כהערה
+1 תיכנות מונחה עצמים זה תפיסה שאומרת שכל דבר הוא אובייקט
+2 מחלקה זה חלק נפרד מהמיין שאפשר לשים בו פונקציות ומשתנים שאפשר לשנות ולזמן במיין
+  הוא במקור העתק של מחלקה אך לרוב משנים בו פרטים כמו משתנים שהגיעו מהמחלקה instance  
+3 ClassName NewInstance = New ClassName
+7 בשביל שהוא יציג מידע מסויים ולא רק את שם המחלקה override במחלקה מציג את שם המחלקה ועושים לו  ToString 
+
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace computer
+{
+    [DebuggerDisplay("{model} * 3.67")]
+    class computer
+    {
+        public string model;
+        public int price;
+        public int numberOfProcessors;
+        public float sceenSize = 0f;
+        public bool isTurnedOn;
+        public void TellMeThePrice()
+            {
+            Console.WriteLine($"the price is {price}");
+            }
+        public void TellMeTheScreenSize()
+        {
+            Console.WriteLine($"the screen size is {sceenSize}");
+        }
+        public void TurnOn()
+        {
+            isTurnedOn = true;
+        }
+        public void TurnOff()
+        {
+            isTurnedOn = false;
+        }
+        public void AddAProcessor()
+        {
+            numberOfProcessors++;
+        }
+        public override string ToString()
+        {
+            return $"model: {model} price: {price} number of processors: {numberOfProcessors} sceen size: {sceenSize}";
+        }
+
+    }
+}
+
+// i did the computer in general and the specific computers in different files like you said in the visual studio but i put them togeter
+// here 
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace computer
+{
+    [DebuggerDisplay("{model} * 3.67")]
+    class computer
+    {
+        public string model;
+        public int price;
+        public int numberOfProcessors;
+        public float sceenSize = 0f;
+        public bool isTurnedOn;
+        public void TellMeThePrice()
+            {
+            Console.WriteLine($"the price is {price}");
+            }
+        public void TellMeTheScreenSize()
+        {
+            Console.WriteLine($"the screen size is {sceenSize}");
+        }
+        public void TurnOn()
+        {
+            isTurnedOn = true;
+        }
+        public void TurnOff()
+        {
+            isTurnedOn = false;
+        }
+        public void AddAProcessor()
+        {
+            numberOfProcessors++;
+        }
+        public override string ToString()
+        {
+            return $"model: {model} price: {price} number of processors: {numberOfProcessors} sceen size: {sceenSize}";
+        }
+
+    }
+}
+
